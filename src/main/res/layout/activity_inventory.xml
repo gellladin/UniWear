@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_scrapbook"
+    android:fillViewport="true"
+    android:minHeight="800dp"
+    tools:context=".InventoryActivity"
+    tools:ignore="MissingConstraints"
+    tools:deviceId="pixel_5">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_poster" android:orientation="vertical" android:padding="18dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_title_tab" android:fontFamily="sans-serif-black" android:gravity="center" android:text="Inventory Control" android:textColor="@color/ink" android:textSize="25sp" />
+            <LinearLayout android:id="@+id/inventoryListContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:orientation="vertical" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnAddStock" style="@style/Widget.MaterialComponents.Button" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="12dp" android:text="Add Stock" android:textAllCaps="false" android:textColor="@color/white" app:backgroundTint="@color/maroon" app:cornerRadius="14dp" app:strokeColor="@color/line" app:strokeWidth="2dp" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnAddNewItem" style="@style/Widget.MaterialComponents.Button" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="12dp" android:text="Add New Item" android:textAllCaps="false" android:textColor="@color/ink" app:backgroundTint="@color/yellow" app:cornerRadius="14dp" app:strokeColor="@color/line" app:strokeWidth="2dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

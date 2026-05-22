@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_scrapbook"
+    android:fillViewport="true"
+    tools:context=".MainActivity"
+    tools:ignore="MissingConstraints">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- User Type Selection Screen -->
+        <LinearLayout
+            android:id="@+id/userTypeSelectionContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_poster"
+            android:elevation="3dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="24dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:adjustViewBounds="true"
+                android:background="@color/white"
+                android:contentDescription="@string/app_name"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_uniwear_full" />
+
+            <TextView
+                android:id="@+id/welcomeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/bg_note"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:lineSpacingExtra="3dp"
+                android:text="Your campus gear, organized and ready when you need it."
+                android:textColor="@color/ink"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/welcomeDivider"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/divider_line" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="What are you?"
+                android:textColor="@color/ink"
+                android:textSize="22sp" />
+
+            <!-- Student Option -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStudentOption"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Student"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:backgroundTint="@color/maroon"
+                app:cornerRadius="14dp"
+                app:strokeColor="@color/line"
+                app:strokeWidth="2dp" />
+
+            <!-- Staff Option -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStaffOption"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Staff"
+                android:textAllCaps="false"
+                android:textColor="@color/ink"
+                android:textSize="16sp"
+                app:backgroundTint="@color/yellow"
+                app:cornerRadius="14dp"
+                app:strokeColor="@color/line"
+                app:strokeWidth="2dp" />
+
+        </LinearLayout>
+
+        <!-- Legacy Auth Form Container (Hidden by default) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_poster"
+            android:elevation="3dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="24dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:adjustViewBounds="true"
+                android:background="@color/white"
+                android:contentDescription="@string/app_name"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_uniwear_full" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Log In"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/maroon"
+                app:cornerRadius="14dp"
+                app:strokeColor="@color/line"
+                app:strokeWidth="2dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSignUp"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Sign Up"
+                android:textAllCaps="false"
+                android:textColor="@color/ink"
+                app:backgroundTint="@color/yellow"
+                app:cornerRadius="14dp"
+                app:strokeColor="@color/line"
+                app:strokeWidth="2dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStudentStore"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Order as Student"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/maroon"
+                app:cornerRadius="14dp"
+                app:strokeColor="@color/line"
+                app:strokeWidth="2dp" />
+
+            <LinearLayout
+                android:id="@+id/authForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="22dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/authTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="Log In"
+                    android:textColor="@color/ink"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/authSubtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:text="Enter your account details."
+                    android:textColor="@color/muted"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/emailInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email address"
+                    app:boxBackgroundColor="@color/auth_field_background"
+                    app:boxStrokeColor="@color/line"
+                    app:hintTextColor="@color/auth_field_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/emailInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:textColor="@color/auth_field_text"
+                        android:textColorHint="@color/auth_field_hint" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/passwordInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Password"
+                    app:boxBackgroundColor="@color/auth_field_background"
+                    app:boxStrokeColor="@color/line"
+                    app:endIconMode="password_toggle"
+                    app:hintTextColor="@color/auth_field_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/passwordInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        android:textColor="@color/auth_field_text"
+                        android:textColorHint="@color/auth_field_hint" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/confirmPasswordInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Confirm password"
+                    android:visibility="gone"
+                    app:boxBackgroundColor="@color/auth_field_background"
+                    app:boxStrokeColor="@color/line"
+                    app:endIconMode="password_toggle"
+                    app:hintTextColor="@color/auth_field_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/confirmPasswordInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        android:textColor="@color/auth_field_text"
+                        android:textColorHint="@color/auth_field_hint" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAuthSubmit"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Log In"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/maroon"
+                    app:cornerRadius="14dp"
+                    app:strokeColor="@color/line"
+                    app:strokeWidth="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">UniWear</string>
+    <string name="firebase_api_key">AIzaSyCEoV0DOSl3pJQaEQQCSXpeHKgAi1uFROE</string>
+    <string name="firebase_application_id">1:60908410611:android:66ffd693d2af2a6be3c986</string>
+    <string name="firebase_project_id">unigear-dff2f</string>
+</resources>

@@ -1,0 +1,29 @@
+<resources>
+    <color name="maroon">#9E3D3D</color>
+    <color name="yellow">#FFE17A</color>
+    <color name="pastel_yellow">#FFF4B8</color>
+    <color name="soft_red">#F4A3A3</color>
+    <color name="cream">#FFFBEF</color>
+    <color name="paper">#FFFCF4</color>
+    <color name="auth_field_background">#FFFCF4</color>
+    <color name="auth_field_text">#2E1A1A</color>
+    <color name="auth_field_hint">#7B6464</color>
+    <color name="ink">#2E1A1A</color>
+    <color name="line">#392222</color>
+    <color name="muted">#7B6464</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="dashboard_bg">#9D7CF2</color>
+    <color name="dashboard_surface">#F7F4FF</color>
+    <color name="dashboard_card">#FFFFFF</color>
+    <color name="dashboard_purple">#8D4FE8</color>
+    <color name="dashboard_purple_soft">#EEE7FF</color>
+    <color name="dashboard_red">#F45F84</color>
+    <color name="dashboard_red_soft">#FFE7EE</color>
+    <color name="dashboard_yellow_soft">#FFF5D8</color>
+    <color name="dashboard_green">#58C28B</color>
+    <color name="dashboard_green_soft">#E7F8EE</color>
+    <color name="dashboard_text">#1D1433</color>
+    <color name="dashboard_muted">#7C738C</color>
+    <color name="dashboard_line">#ECE8F8</color>
+</resources>

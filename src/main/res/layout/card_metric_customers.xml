@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginEnd="12dp"
+    android:layout_weight="1"
+    android:background="@drawable/bg_dashboard_card"
+    android:elevation="2dp"
+    android:gravity="center_vertical"
+    android:minHeight="120dp"
+    android:orientation="horizontal"
+    android:padding="14dp"
+    tools:deviceId="pixel_5">
+
+    <TextView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/bg_metric_purple"
+        android:gravity="center"
+        android:text="3"
+        android:textColor="@color/dashboard_purple"
+        android:textSize="11sp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtStudentsServedMetric"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="3"
+            android:textColor="@color/dashboard_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Students Served"
+            android:textColor="@color/dashboard_muted"
+            android:textSize="10sp" />
+    </LinearLayout>
+</LinearLayout>

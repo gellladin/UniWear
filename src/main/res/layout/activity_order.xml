@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_scrapbook"
+    android:fillViewport="true"
+    android:minHeight="800dp"
+    tools:context=".OrderActivity"
+    tools:ignore="MissingConstraints"
+    tools:deviceId="pixel_5">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_poster" android:orientation="vertical" android:padding="18dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_title_tab" android:fontFamily="sans-serif-black" android:gravity="center" android:text="Create Order" android:textColor="@color/ink" android:textSize="25sp" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:background="@drawable/bg_note" android:padding="12dp" android:text="Step 1: Check the item. Step 2: enter student name and quantity. Step 3: submit, then track payment, status, and pickup." android:textColor="@color/ink" android:textSize="14sp" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:background="@drawable/bg_feature_panel" android:orientation="vertical" android:padding="14dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="sans-serif-black" android:text="Selected Item" android:textColor="@color/ink" android:textSize="18sp" />
+                <TextView android:id="@+id/orderItemText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Official ID Lanyard" android:textColor="@color/ink" android:textSize="14sp" />
+                <TextView android:id="@+id/orderStockText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="PHP 85 each | 34 pcs available" android:textColor="@color/ink" android:textSize="14sp" />
+            </LinearLayout>
+            <EditText android:id="@+id/studentNameInput" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="14dp" android:background="@drawable/bg_note" android:hint="Student name" android:padding="12dp" android:singleLine="true" android:textColor="@color/ink" android:textColorHint="@color/muted" />
+            <EditText android:id="@+id/quantityInput" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="10dp" android:background="@drawable/bg_note" android:hint="Quantity" android:inputType="number" android:padding="12dp" android:singleLine="true" android:text="1" android:textColor="@color/ink" android:textColorHint="@color/muted" />
+            <LinearLayout android:id="@+id/orderReviewPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:background="@drawable/bg_feature_panel" android:orientation="vertical" android:padding="14dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="sans-serif-black" android:text="Review Order" android:textColor="@color/ink" android:textSize="18sp" />
+                <TextView android:id="@+id/orderTotalText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Total: PHP 85" android:textColor="@color/ink" android:textSize="14sp" />
+                <TextView android:id="@+id/orderNextStepText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="After submitting, this order will appear in Payments, Order Status, Distribution, and Availability." android:textColor="@color/ink" android:textSize="13sp" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnSubmitOrder" style="@style/Widget.MaterialComponents.Button" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="Submit Order" android:textAllCaps="false" android:textColor="@color/white" app:backgroundTint="@color/maroon" app:cornerRadius="14dp" app:strokeColor="@color/line" app:strokeWidth="2dp" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/orderSubmittedPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:background="@drawable/bg_feature_accent" android:orientation="vertical" android:padding="14dp" android:visibility="gone">
+                <TextView android:id="@+id/orderSubmittedText" android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="sans-serif-black" android:text="Order submitted." android:textColor="@color/ink" android:textSize="18sp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Next, collect payment or update order status when the item is ready." android:textColor="@color/ink" android:textSize="14sp" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnGoPayments" style="@style/Widget.MaterialComponents.Button" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="Go to Payments" android:textAllCaps="false" android:textColor="@color/white" app:backgroundTint="@color/maroon" app:cornerRadius="14dp" app:strokeColor="@color/line" app:strokeWidth="2dp" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnGoOrderStatus" style="@style/Widget.MaterialComponents.Button" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="Go to Order Status" android:textAllCaps="false" android:textColor="@color/ink" app:backgroundTint="@color/yellow" app:cornerRadius="14dp" app:strokeColor="@color/line" app:strokeWidth="2dp" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnBackCatalog" style="@style/Widget.MaterialComponents.Button" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="Back to Catalog" android:textAllCaps="false" android:textColor="@color/ink" app:backgroundTint="@color/yellow" app:cornerRadius="14dp" app:strokeColor="@color/line" app:strokeWidth="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,5 @@
+<resources>
+    <color name="auth_field_background">#1D1433</color>
+    <color name="auth_field_text">#FFFFFF</color>
+    <color name="auth_field_hint">#D8D0E6</color>
+</resources>

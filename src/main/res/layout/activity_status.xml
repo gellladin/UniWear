@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_scrapbook"
+    android:fillViewport="true"
+    android:minHeight="800dp"
+    tools:context=".StatusActivity"
+    tools:ignore="MissingConstraints"
+    tools:deviceId="pixel_5">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_poster" android:orientation="vertical" android:padding="18dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_title_tab" android:fontFamily="sans-serif-black" android:gravity="center" android:text="Order Status" android:textColor="@color/ink" android:textSize="25sp" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:background="@drawable/bg_note" android:padding="12dp" android:text="Payments tells whether the order is paid. Distribution tells whether it was claimed. Order Status shows where the order is in the process." android:textColor="@color/ink" android:textSize="14sp" />
+            <LinearLayout android:id="@+id/statusListContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

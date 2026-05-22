@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_scrapbook"
+    android:fillViewport="true"
+    android:minHeight="800dp"
+    tools:context=".StudentLoginActivity"
+    tools:ignore="MissingConstraints"
+    tools:deviceId="pixel_5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_poster"
+            android:elevation="3dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBackStudent"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="72dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="12dp"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="0dp"
+                    android:text="Back"
+                    android:textAllCaps="false"
+                    android:textColor="@color/ink"
+                    android:textSize="13sp"
+                    app:backgroundTint="@color/yellow"
+                    app:cornerRadius="14dp"
+                    app:strokeColor="@color/line"
+                    app:strokeWidth="2dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Student Login"
+                    android:textColor="@color/ink"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="16dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="Student Icon"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_uniwear_full" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/bg_note"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:lineSpacingExtra="3dp"
+                android:padding="12dp"
+                android:text="Order your campus gear and track your requests"
+                android:textColor="@color/ink"
+                android:textSize="16sp" />
+
+            <!-- Login Form -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="22dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="Log In as Student"
+                    android:textColor="@color/ink"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="18dp"
+                    android:gravity="center"
+                    android:text="Access your student account"
+                    android:textColor="@color/muted"
+                    android:textSize="14sp" />
+
+                <!-- Student ID Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/studentIdInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Student ID"
+                    app:boxBackgroundColor="@color/auth_field_background"
+                    app:boxStrokeColor="@color/line"
+                    app:hintTextColor="@color/auth_field_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/studentIdInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@color/auth_field_text"
+                        android:textColorHint="@color/auth_field_hint" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Email Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/emailStudentInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="University Email"
+                    app:boxBackgroundColor="@color/auth_field_background"
+                    app:boxStrokeColor="@color/line"
+                    app:hintTextColor="@color/auth_field_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/emailStudentInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:textColor="@color/auth_field_text"
+                        android:textColorHint="@color/auth_field_hint" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Password Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/passwordStudentInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Password"
+                    app:boxBackgroundColor="@color/auth_field_background"
+                    app:boxStrokeColor="@color/line"
+                    app:endIconMode="password_toggle"
+                    app:hintTextColor="@color/auth_field_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/passwordStudentInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        android:textColor="@color/auth_field_text"
+                        android:textColorHint="@color/auth_field_hint" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Login Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnStudentLoginSubmit"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Log In"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/maroon"
+                    app:cornerRadius="14dp"
+                    app:strokeColor="@color/line"
+                    app:strokeWidth="2dp" />
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/divider_line" />
+
+                <!-- Sign Up Link -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Don't have an account? "
+                        android:textColor="@color/muted"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvStudentSignUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sign Up"
+                        android:textColor="@color/maroon"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
